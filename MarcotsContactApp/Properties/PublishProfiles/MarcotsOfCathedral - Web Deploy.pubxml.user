@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAu5R9/qq09Eylj9yVE9wUGwAAAAACAAAAAAAQZgAAAAEAACAAAADwgN6PnG5T6yJxBWX4HYzDkYEeKwxcEMvRkk2H4IqrUQAAAAAOgAAAAAIAACAAAACF/odbFIuZ9f7mbDLwoeRo2R0/2qT75Qjg7OQgqqiw2YAAAACweh//SOtWcnsFZa9E1UrUXPLnwzN7fjqSkmZTS6px0yxseqVB148fGF4dRQESY7MD+PHrItffltVIHAY1W+It/DpCEmkuBSX1HZMyFhRcF8/ZWuyum8ObK7AAlve33fyXVh2VV9F3LXj4JoHSwb3EH4Sp031RD6qtnFrX3RI+qEAAAABwXtMdW4LVYKjfvU5ohzGJt+X++XQZWwOGsBrBaTtTv+yUFxcZA/a8KtkrFFQxQR8WR6HyvMz0lVBdnuBQiTjJ</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Data Source=tcp:marcotscontactapp20200521083853dbserver.database.windows.net,1433%3bInitial Catalog=MarcotsContactApp20200521083853_db%3bUser Id=jmunyeneh%40marcotscontactapp20200521083853dbserver%3bPassword=!%40Mildred2036473</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="MarcotsContactApp.Data.ApplicationDbContext">
+      <Value>Data Source=tcp:marcotscontactapp20200521083853dbserver.database.windows.net,1433%3bInitial Catalog=MarcotsContactApp20200521083853_db%3bUser Id=jmunyeneh%40marcotscontactapp20200521083853dbserver%3bPassword=!%40Mildred2036473</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

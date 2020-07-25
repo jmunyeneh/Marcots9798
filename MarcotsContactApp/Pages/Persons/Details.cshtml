@@ -1,0 +1,157 @@
+﻿@page
+@model MarcotsContactApp.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+    <div>
+        <h4>Contact Details for <em>@ViewData["FullName"]</em></h4>
+        <hr />
+
+        <div class="card mb-3">
+            <h3 class="card-header">@ViewData["FullName"]</h3>
+            <div class="card-body">
+                <h5 class="card-title">@Html.DisplayFor(model => model.Contact.NickName)</h5>
+                <h6 class="card-subtitle text-muted">Class of 97/98</h6>
+            </div>            
+            <a href="#">
+                <img src="@Url.Content(@Model.Contact.GetInlineImageSrc())" class="img img-thumbnail" alt="Card image" width="171" height="180" />
+            </a>
+            <div class="card-body">
+                <p class="card-text">@Html.DisplayFor(model => model.Contact.Description)</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><b>Telephone</b> @Html.DisplayFor(model => model.Contact.Telephone)</li>
+                <li class="list-group-item"><b>Kids?</b> @Html.DisplayFor(model => model.Contact.Kids)</li>
+                <li class="list-group-item"><b>Email</b> @Html.DisplayFor(model => model.Contact.Email)</li>
+                <li class="list-group-item"><b>Occupation</b> @Html.DisplayFor(model => model.Contact.Occupation)</li>
+            </ul>
+            @*<div class="card-body">
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+            </div>*@
+        <div class="card-footer text-muted">
+            @{
+                DateTime d = (DateTime)ViewData["DateInserted"];
+                var days = DateTime.Now.Subtract(d).Days.ToString();
+            }
+          Registered @days days ago
+        </div>
+        </div>
+        @*<div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Card title</h4>
+                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+            </div>
+        </div>*@
+
+        @*<div class="row">
+            <div class="col-ms-7">
+                <a href="#">
+                    <img src="@Url.Content(@Model.Contact.GetInlineImageSrc())" class="img img-thumbnail" alt="Not available" width="171" height="180" />
+                </a>
+            </div>
+            <div class="col-md-7">
+               <dl class="row">
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Contact.FirstName)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Contact.FirstName)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Contact.MidName)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Contact.MidName)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Contact.LastName)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Contact.LastName)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Contact.NickName)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Contact.NickName)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Contact.Description)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Contact.Description)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Contact.Telephone)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Contact.Telephone)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Contact.Kids)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Contact.Kids)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Contact.Email)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Contact.Email)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Contact.Occupation)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Contact.Occupation)
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        *@
+
+        @if (Model.Contact.ContactStatus != ContactStatus.Approved)
+        {
+            @if ((await AuthorizationService.AuthorizeAsync(
+         User, Model.Contact, ContactOperations.Approve)).Succeeded)
+            {
+                <form style="display:inline;" method="post">
+                    <input type="hidden" name="id" value="@Model.Contact.PersonId" />
+                    <input type="hidden" name="status" value="@ContactStatus.Approved" />
+                    <button type="submit" class="btn btn-xs btn-success">Approve</button>
+                </form>
+            }
+        }
+
+        @if (Model.Contact.ContactStatus != ContactStatus.Rejected)
+        {
+            @if ((await AuthorizationService.AuthorizeAsync(
+         User, Model.Contact, ContactOperations.Reject)).Succeeded)
+            {
+                <form style="display:inline;" method="post">
+                    <input type="hidden" name="id" value="@Model.Contact.PersonId" />
+                    <input type="hidden" name="status" value="@ContactStatus.Rejected" />
+                    <button type="submit" class="btn btn-xs btn-danger">Reject</button>
+                </form>
+            }
+        }
+
+        <div>
+            @if ((await AuthorizationService.AuthorizeAsync(
+             User, Model.Contact,
+             ContactOperations.Update)).Succeeded)
+            {
+                <a asp-page="./Edit" asp-route-id="@Model.Contact.PersonId">Edit</a>
+                <text> | </text>
+            }
+            <a asp-page="./Index">Back to List</a>
+        </div>
+    </div>
+

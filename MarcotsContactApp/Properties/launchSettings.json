@@ -1,0 +1,31 @@
+{
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:60465",
+      "sslPort": 44395
+    }
+  },
+  "profiles": {
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "SeedUserPW": "!@Marcots9798",
+        "Authentication:Google:ClientSecret": "zkC1IcTFxTN-HYSaCiMUpzlj",
+        "jmunyeneh": "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 ",
+        "Authentication:Google:ClientId": "236981705681-e9n3rnoubd7me3q3mhpkngcg9nf3bkhk.apps.googleusercontent.com",
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "MarcotsContactApp": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:5001;http://localhost:5000"
+    }
+  }
+}

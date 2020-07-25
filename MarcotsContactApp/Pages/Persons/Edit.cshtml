@@ -1,0 +1,112 @@
+﻿@page
+@model MarcotsContactApp.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+    <h3>Contact Edit for <em>@ViewData["FullName"]</em></h3>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Contact.PersonId" />
+            @*<div class="form-group">
+            <label asp-for="Contact.OwnerId" class="control-label"></label>
+            <input asp-for="Contact.OwnerId" class="form-control" />
+            <span asp-validation-for="Contact.OwnerId" class="text-danger"></span>
+        </div>*@
+            <div class="form-group">
+                <label asp-for="Contact.FirstName" class="control-label"></label>
+                <input asp-for="Contact.FirstName" class="form-control" />
+                <span asp-validation-for="Contact.FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Contact.MidName" class="control-label"></label>
+                <input asp-for="Contact.MidName" class="form-control" />
+                <span asp-validation-for="Contact.MidName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Contact.LastName" class="control-label"></label>
+                <input asp-for="Contact.LastName" class="form-control" />
+                <span asp-validation-for="Contact.LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Contact.NickName" class="control-label"></label>
+                <input asp-for="Contact.NickName" class="form-control" />
+                <span asp-validation-for="Contact.NickName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Contact.Description" class="control-label"></label>
+                <textarea asp-for="Contact.Description" class="form-control"></textarea>
+                <span asp-validation-for="Contact.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Contact.Telephone" class="control-label"></label>
+                <input asp-for="Contact.Telephone" class="form-control" />
+                <span asp-validation-for="Contact.Telephone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Contact.Kids" class="control-label"></label>
+                <input asp-for="Contact.Kids" class="form-control" />
+                <span asp-validation-for="Contact.Kids" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Contact.Email" class="control-label"></label>
+                <input asp-for="Contact.Email" class="form-control" />
+                <span asp-validation-for="Contact.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Contact.Occupation" class="control-label"></label>
+                <input asp-for="Contact.Occupation" class="form-control" />
+                <span asp-validation-for="Contact.Occupation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Contact.StatusId" class="control-label"></label>
+                <select asp-for="Contact.StatusId" class="form-control" asp-items="ViewBag.StatusId"></select>
+                <span asp-validation-for="Contact.StatusId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Contact.BirthDay" class="control-label"></label>
+                <select asp-for="Contact.BirthDay" class="form-control" asp-items="ViewBag.BirthDay"></select>
+                <span asp-validation-for="Contact.BirthDay" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Contact.BirthMonth" class="control-label"></label>
+                <select asp-for="Contact.BirthMonth" class="form-control" asp-items="ViewBag.BirthMonth"></select>
+                <span asp-validation-for="Contact.BirthMonth" class="text-danger"></span>
+            </div>
+
+            @*<div class="form-group">
+                <label asp-for="Contact.Image" class="control-label"></label>
+                <input type="file" asp-for="Image" class="form-control" />
+            </div>*@
+
+            <div class="form-group">
+                <div class="input-group mb-3">
+                    <div class="custom-file">
+                        <input type="file" asp-for="Image" class="custom-file-input" id="inputGroupFile02">
+                        <label class="custom-file-label" for="inputGroupFile02">Choose image</label>
+                    </div>
+                    <div class="input-group-append">
+                        <span class="input-group-text" id="">Upload</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

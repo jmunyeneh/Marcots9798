@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="MarcotsOfCathedral" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\JaydenExpress\\source\\repos\\MarcotsContactApp\\obj\\Release\\netcoreapp3\.1\\PubTmp\\Out\\$" />
+  </parameter>
+  <parameter name="MarcotsContactApp.Data.ApplicationDbContext" description="" value="Data Source=tcp:marcotscontactapp20200521083853dbserver.database.windows.net,1433;Initial Catalog=MarcotsContactApp20200521083853_db;User Id=jmunyeneh@marcotscontactapp20200521083853dbserver;Password=!@Mildred2036473" tags="dbfullsql">
+    <parameterEntry kind="ProviderPath" scope="dbfullsql" match="^C:\\Users\\JaydenExpress\\source\\repos\\MarcotsContactApp\\obj\\Release\\netcoreapp3\.1\\PubTmp\\EFSQLScripts\\MarcotsContactApp\.Data\.ApplicationDbContext\.sql$" />
+  </parameter>
+</parameters>
