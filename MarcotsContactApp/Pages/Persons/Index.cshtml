@@ -5,11 +5,11 @@
     ViewData["Title"] = "Index";
     Layout = "~/Pages/Shared/_Layout.cshtml";
 
-    var theStudent =  Model.Person.Count();
-  }
+    var cnt = (int)ViewData["TotalRecord"];
+}
 
- <div class="mt-2">
-    Total registered users: <em>@theStudent as of @DateTime.Now.ToShortDateString()</em>
+<div class="mt-2">
+    Total registered users: @cnt<em> as of @DateTime.Now.ToShortDateString()</em>
 </div>
 <p>
     <a asp-page="Create" class="btn btn-primary">Member Entry Info</a>
@@ -17,15 +17,16 @@
 <form>
     <div class="form-row">
         <div>
-            Search by first name: <input type="text" asp-for="SearchString"/>
-            <input type="submit" value="Filter" class="btn btn-primary"/>
+            Find by name: <input type="text" asp-for="SearchString"/>
+            <input type="submit" value="Search" class="btn btn-primary" />
         </div>
     </div>
-</form><br />
+</form>
+<br />
 <table class="table">
     <thead>
         <tr>
-           <th>
+            <th>
                 @Html.DisplayNameFor(model => model.Person[0].FirstName)
             </th>
             <th>
@@ -56,54 +57,71 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Person) {
-        <tr>
-           <td>
-                @Html.DisplayFor(modelItem => item.FirstName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MidName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LastName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NickName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Kids)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ContactStatus)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.BirthDay)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.BirthMonth)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MaritalDesc)
-            </td>
-            <td>
-                @if ((await AuthorizationService.AuthorizeAsync(
-                  User, item,
-                  ContactOperations.Update)).Succeeded)
-                {
-                    <a asp-page="./Edit" asp-route-id="@item.PersonId">Edit</a>
-                    <text> | </text>
-                }
-                <a asp-page="./Details" asp-route-id="@item.PersonId">Details</a>
+        @foreach (var item in Model.Person)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MidName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LastName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NickName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Kids)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ContactStatus)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BirthDay)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BirthMonth)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaritalDesc)
+                </td>
+                <td>
+                    @if ((await AuthorizationService.AuthorizeAsync(
+                     User, item,
+                     ContactOperations.Update)).Succeeded)
+                    {
+                        <a asp-page="./Edit" asp-route-id="@item.PersonId">Edit</a>
+                        <text> | </text>
+                    }
+                    <a asp-page="./Details" asp-route-id="@item.PersonId">Details</a>
 
-                @if ((await AuthorizationService.AuthorizeAsync(
-                    User, item,
-                    ContactOperations.Delete)).Succeeded)
-                {
-                    <text> | </text>
-                    <a asp-page="./Delete" asp-route-id="@item.PersonId">Delete</a>
-                }                
-            </td>
-        </tr>
-}
+                    @if ((await AuthorizationService.AuthorizeAsync(
+                       User, item,
+                       ContactOperations.Delete)).Succeeded)
+                    {
+                        <text> | </text>
+                        <a asp-page="./Delete" asp-route-id="@item.PersonId">Delete</a>
+                    }
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
+
+@{
+    var prevDisabled = !Model.Person.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.Person.HasNextPage ? "disabled" : "";
+}
+
+<a asp-page="./Index"  
+   asp-route-pageIndex="@(Model.Person.PageIndex - 1)"   
+   class="btn btn-primary @prevDisabled">
+    Previous
+</a>
+<a asp-page="./Index"  
+   asp-route-pageIndex="@(Model.Person.PageIndex + 1)"  
+   class="btn btn-primary @nextDisabled">
+    Next
+</a>

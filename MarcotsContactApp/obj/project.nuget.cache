@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tQTcnWd5WXMAABgP8LWnfIxE0gJd4kgpHUwUIz//OGo6ihPXaNHO0aZrt0o+f/RKctYsBUAes+9s4awfXymcvg==",
+  "dgSpecHash": "2p/q/tKrCf2dOjer7sOUNLfq034muV0ETUkNGmyqUQqvZdFO7eNpt4swj6Bin6bSfy+ScevA2fkx3VDwBI6DxA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\JaydenExpress\\source\\repos\\MarcotsContactApp\\MarcotsContactApp.csproj",
+  "projectFilePath": "C:\\Users\\JaydenExpress\\source\\repos\\Projects\\Marcots\\MarcotsContactApp\\MarcotsContactApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\JaydenExpress\\.nuget\\packages\\microsoft.aspnetcore.authentication.google\\3.1.5\\microsoft.aspnetcore.authentication.google.3.1.5.nupkg.sha512",
     "C:\\Users\\JaydenExpress\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.1\\microsoft.aspnetcore.cryptography.internal.3.1.1.nupkg.sha512",
