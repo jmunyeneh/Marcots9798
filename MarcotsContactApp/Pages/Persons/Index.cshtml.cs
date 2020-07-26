@@ -24,13 +24,18 @@ namespace MarcotsContactApp
             UserManager<IdentityUser> userManager, MarcotsContext _context)
             : base(context, authorizationService, userManager, _context)
         {
-        }    
-        public IList<ContactsDTO> Person { get;set; }
+        }
+       
+        public PaginatedList<ContactsDTO> Person { get; set; }
+        //public IList<ContactsDTO> Person { get;set; }
         //Modified by JMunyeneh, 7/22/20
         [BindProperty(SupportsGet = true)]
         public string SearchString { get; set; }
-        
-        public async Task OnGetAsync()
+        string currentFilter { get; set; }
+        int TotalRecord { get; set; }
+
+
+        public async Task OnGetAsync(int? pageIndex)
         {           
 
             var contacts = from c in Context.Contact
@@ -56,10 +61,24 @@ namespace MarcotsContactApp
                                MaritalDesc = c.Status.Description
                            };
 
+
+            TotalRecord = contacts.Count();
+            ViewData["TotalRecord"] = TotalRecord;
+
+            if (SearchString != null)
+            {
+                pageIndex = 1;
+            }
+            else
+            {
+                SearchString = currentFilter;
+            }
+
             //Modified by JMunyeneh, 7/22/20
             if (!string.IsNullOrEmpty(SearchString))
             {
-                contacts = contacts.Where(f => f.FirstName.Contains(SearchString));
+                contacts = contacts.Where(f => f.FirstName.Contains(SearchString) || 
+                                   f.LastName.Contains(SearchString));
             }
 
             var isAuthorized = User.IsInRole(Constants.ContactManagersRole) ||
@@ -75,7 +94,11 @@ namespace MarcotsContactApp
                                             || c.OwnerId == currentUserId);
             }
 
-            Person = await contacts.ToListAsync();
+            //Person = await contacts.ToListAsync();
+
+            int pageSize = 3;
+            Person = await PaginatedList<ContactsDTO>.CreateAsync(
+                contacts.AsNoTracking(), pageIndex ?? 1, pageSize);
         }
     }
 }
