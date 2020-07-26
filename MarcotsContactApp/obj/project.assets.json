@@ -8934,11 +8934,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\JaydenExpress\\source\\repos\\MarcotsContactApp\\MarcotsContactApp.csproj",
+      "projectUniqueName": "C:\\Users\\JaydenExpress\\source\\repos\\Projects\\Marcots\\MarcotsContactApp\\MarcotsContactApp.csproj",
       "projectName": "MarcotsContactApp",
-      "projectPath": "C:\\Users\\JaydenExpress\\source\\repos\\MarcotsContactApp\\MarcotsContactApp.csproj",
+      "projectPath": "C:\\Users\\JaydenExpress\\source\\repos\\Projects\\Marcots\\MarcotsContactApp\\MarcotsContactApp.csproj",
       "packagesPath": "C:\\Users\\JaydenExpress\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\JaydenExpress\\source\\repos\\MarcotsContactApp\\obj\\",
+      "outputPath": "C:\\Users\\JaydenExpress\\source\\repos\\Projects\\Marcots\\MarcotsContactApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
