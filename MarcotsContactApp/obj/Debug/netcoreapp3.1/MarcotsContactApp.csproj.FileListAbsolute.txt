@@ -452,3 +452,4 @@ C:\Users\JaydenExpress\source\repos\Projects\Marcots\MarcotsContactApp\obj\Debug
 C:\Users\JaydenExpress\source\repos\Projects\Marcots\MarcotsContactApp\obj\Debug\netcoreapp3.1\MarcotsContactApp.pdb
 C:\Users\JaydenExpress\source\repos\Projects\Marcots\MarcotsContactApp\obj\Debug\netcoreapp3.1\MarcotsContactApp.genruntimeconfig.cache
 C:\Users\JaydenExpress\source\repos\Projects\Marcots\MarcotsContactApp\obj\Debug\netcoreapp3.1\MarcotsContactApp.csprojAssemblyReference.cache
+C:\Users\JaydenExpress\source\repos\Projects\Marcots\MarcotsContactApp\bin\Debug\netcoreapp3.1\Properties\ServiceDependencies\MarcotsOfCathedral - Web Deploy\profile.arm.json
