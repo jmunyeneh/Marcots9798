@@ -88,11 +88,16 @@ namespace MarcotsContactApp
             Contact.ModifiedDate = DateTime.UtcNow;
             Contact.InsertedDate = contact.InsertedDate ?? DateTime.UtcNow;
 
+            Contact.Image = contact.Image;
+            Contact.ImageContentType = contact.ImageContentType;
+            
+
             if (Image != null)
             {
                 using (var stream = new MemoryStream())
                 {
                     await Image.CopyToAsync(stream);
+
                     Contact.Image = stream.ToArray();
                     Contact.ImageContentType = Image.ContentType;                   
                 }
