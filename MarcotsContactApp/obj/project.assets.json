@@ -7556,7 +7556,7 @@
       ]
     },
     "System.Runtime.Serialization.Formatters/4.3.0": {
-      "sha512": "KT591AkTNFOTbhZlaeMVvfax3RqhH1EJlcwF50Wm7sfnBLuHiOeZRRKrr1ns3NESkM20KPZ5Ol/ueMq5vg4QoQ==",
+      "sha512": "a/Ag5kyZ0UpKiMaqGURBLTSmettq9j6xPKNVDjymPZcHbillk1W8zbAyvcsAuJu296GB6lLfg9vfQvrBHq2PpQ==",
       "type": "package",
       "path": "system.runtime.serialization.formatters/4.3.0",
       "files": [
@@ -8926,11 +8926,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\JaydenExpress\\source\\repos\\Projects\\Marcots\\MarcotsContactApp\\MarcotsContactApp.csproj",
+      "projectUniqueName": "C:\\Users\\JaydenExpress\\source\\repos\\jmunyeneh\\Marcots9798\\MarcotsContactApp\\MarcotsContactApp.csproj",
       "projectName": "MarcotsContactApp",
-      "projectPath": "C:\\Users\\JaydenExpress\\source\\repos\\Projects\\Marcots\\MarcotsContactApp\\MarcotsContactApp.csproj",
+      "projectPath": "C:\\Users\\JaydenExpress\\source\\repos\\jmunyeneh\\Marcots9798\\MarcotsContactApp\\MarcotsContactApp.csproj",
       "packagesPath": "C:\\Users\\JaydenExpress\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\JaydenExpress\\source\\repos\\Projects\\Marcots\\MarcotsContactApp\\obj\\",
+      "outputPath": "C:\\Users\\JaydenExpress\\source\\repos\\jmunyeneh\\Marcots9798\\MarcotsContactApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",

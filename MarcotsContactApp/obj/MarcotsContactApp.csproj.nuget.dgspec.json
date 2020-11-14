@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\JaydenExpress\\source\\repos\\Projects\\Marcots\\MarcotsContactApp\\MarcotsContactApp.csproj": {}
+    "C:\\Users\\JaydenExpress\\source\\repos\\jmunyeneh\\Marcots9798\\MarcotsContactApp\\MarcotsContactApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\JaydenExpress\\source\\repos\\Projects\\Marcots\\MarcotsContactApp\\MarcotsContactApp.csproj": {
+    "C:\\Users\\JaydenExpress\\source\\repos\\jmunyeneh\\Marcots9798\\MarcotsContactApp\\MarcotsContactApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\JaydenExpress\\source\\repos\\Projects\\Marcots\\MarcotsContactApp\\MarcotsContactApp.csproj",
+        "projectUniqueName": "C:\\Users\\JaydenExpress\\source\\repos\\jmunyeneh\\Marcots9798\\MarcotsContactApp\\MarcotsContactApp.csproj",
         "projectName": "MarcotsContactApp",
-        "projectPath": "C:\\Users\\JaydenExpress\\source\\repos\\Projects\\Marcots\\MarcotsContactApp\\MarcotsContactApp.csproj",
+        "projectPath": "C:\\Users\\JaydenExpress\\source\\repos\\jmunyeneh\\Marcots9798\\MarcotsContactApp\\MarcotsContactApp.csproj",
         "packagesPath": "C:\\Users\\JaydenExpress\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\JaydenExpress\\source\\repos\\Projects\\Marcots\\MarcotsContactApp\\obj\\",
+        "outputPath": "C:\\Users\\JaydenExpress\\source\\repos\\jmunyeneh\\Marcots9798\\MarcotsContactApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
