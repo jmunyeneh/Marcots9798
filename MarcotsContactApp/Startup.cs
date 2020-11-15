@@ -18,6 +18,7 @@ using MarcotsContactApp.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Authorization;
 using MarcotsContactApp.Authorization;
+using MarcotsContactApp.Interfaces;
 
 namespace MarcotsContactApp
 {
@@ -40,9 +41,11 @@ namespace MarcotsContactApp
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
             services.Configure<DataProtectionTokenProviderOptions>(o => o.TokenLifespan = TimeSpan.FromHours(3));
-                        
+
+            services.AddTransient<IContactService, ContactService>();
             services.AddTransient<IEmailSender, EmailSender>();
             services.Configure<AuthMessageSenderOptions>(Configuration);
+            
 
             services.AddRazorPages();
             services.AddAuthentication()
