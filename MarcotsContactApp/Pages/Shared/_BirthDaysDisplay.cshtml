@@ -1,0 +1,49 @@
+﻿@{
+    var persons = service.GetPersonInfo();
+    int monthNumber = DateTime.Now.Month;
+    string monthName = System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(monthNumber);
+}
+
+<div class="text-center">
+    <br />
+    <div>
+
+        <br />
+        <div>         
+           @if (persons.Any())
+           {
+            <P>
+                 Birthdays of the month of <em>@monthName</em>
+             </P>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Birth Day</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in persons)
+                        {
+                            <tr>
+                                <td><img class="img img-thumbnail" src="@Url.Content(item.GetInlineImageSrc())" alt="Not available" width="171" height="180" /></td>
+                                <td>@Html.DisplayFor(modelItem => item.FirstName)</td>
+                                <td>@Html.DisplayFor(modelItem => item.LastName)</td>
+                                <td>@monthName @Html.DisplayFor(modelItem => item.BirthDay)</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+           }else
+           {
+               <p>
+
+               </p>
+           }
+
+        </div>
+    </div>
+
+</div>

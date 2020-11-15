@@ -608,7 +608,6 @@ C:\Users\JaydenExpress\Source\Repos\jmunyeneh\Marcots9798\MarcotsContactApp\bin\
 C:\Users\JaydenExpress\Source\Repos\jmunyeneh\Marcots9798\MarcotsContactApp\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\JaydenExpress\Source\Repos\jmunyeneh\Marcots9798\MarcotsContactApp\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\JaydenExpress\Source\Repos\jmunyeneh\Marcots9798\MarcotsContactApp\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\JaydenExpress\Source\Repos\jmunyeneh\Marcots9798\MarcotsContactApp\obj\Debug\netcoreapp3.1\MarcotsContactApp.csprojAssemblyReference.cache
 C:\Users\JaydenExpress\Source\Repos\jmunyeneh\Marcots9798\MarcotsContactApp\obj\Debug\netcoreapp3.1\MarcotsContactApp.AssemblyInfoInputs.cache
 C:\Users\JaydenExpress\Source\Repos\jmunyeneh\Marcots9798\MarcotsContactApp\obj\Debug\netcoreapp3.1\MarcotsContactApp.AssemblyInfo.cs
 C:\Users\JaydenExpress\Source\Repos\jmunyeneh\Marcots9798\MarcotsContactApp\obj\Debug\netcoreapp3.1\MarcotsContactApp.csproj.CoreCompileInputs.cache
@@ -681,3 +680,5 @@ C:\Users\JaydenExpress\Source\Repos\jmunyeneh\Marcots9798\MarcotsContactApp\obj\
 C:\Users\JaydenExpress\Source\Repos\jmunyeneh\Marcots9798\MarcotsContactApp\obj\Debug\netcoreapp3.1\MarcotsContactApp.dll
 C:\Users\JaydenExpress\Source\Repos\jmunyeneh\Marcots9798\MarcotsContactApp\obj\Debug\netcoreapp3.1\MarcotsContactApp.pdb
 C:\Users\JaydenExpress\Source\Repos\jmunyeneh\Marcots9798\MarcotsContactApp\obj\Debug\netcoreapp3.1\MarcotsContactApp.genruntimeconfig.cache
+C:\Users\JaydenExpress\source\repos\jmunyeneh\Marcots9798\MarcotsContactApp\obj\Debug\netcoreapp3.1\Razor\Pages\Shared\_BirthDaysDisplay.cshtml.g.cs
+C:\Users\JaydenExpress\source\repos\jmunyeneh\Marcots9798\MarcotsContactApp\obj\Debug\netcoreapp3.1\MarcotsContactApp.csprojAssemblyReference.cache
