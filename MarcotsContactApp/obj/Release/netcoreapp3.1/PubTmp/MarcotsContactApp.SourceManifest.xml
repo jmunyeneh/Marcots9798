@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <sitemanifest>
-  <IisApp path="C:\Users\JaydenExpress\source\repos\Projects\Marcots\MarcotsContactApp\obj\Release\netcoreapp3.1\PubTmp\Out\" />
-  <dbfullsql path="C:\Users\JaydenExpress\source\repos\Projects\Marcots\MarcotsContactApp\obj\Release\netcoreapp3.1\PubTmp\EFSQLScripts\MarcotsContactApp.Data.ApplicationDbContext.sql" />
+  <IisApp path="C:\Users\JaydenExpress\Source\Repos\jmunyeneh\Marcots9798\MarcotsContactApp\obj\Release\netcoreapp3.1\PubTmp\Out\" />
+  <dbfullsql path="C:\Users\JaydenExpress\Source\Repos\jmunyeneh\Marcots9798\MarcotsContactApp\obj\Release\netcoreapp3.1\PubTmp\EFSQLScripts\MarcotsContactApp.Data.ApplicationDbContext.sql" />
 </sitemanifest>

@@ -8,83 +8,90 @@
 
 <h4>Member Entry Form</h4>
 <hr />
-<div class="row">
-    <div class="col-md-4">
-        <form method="post" enctype="multipart/form-data">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            @*<div class="form-group">
-                <label asp-for="Person.OwnerId" class="control-label"></label>
-                <input asp-for="Person.OwnerId" class="form-control" />
-                <span asp-validation-for="Person.OwnerId" class="text-danger"></span>
-            </div>*@
-            <div class="form-group">
-                <label asp-for="Person.FirstName" class="control-label"></label>
-                <input asp-for="Person.FirstName" class="form-control" />
-                <span asp-validation-for="Person.FirstName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Person.MidName" class="control-label"></label>
-                <input asp-for="Person.MidName" class="form-control" />
-                <span asp-validation-for="Person.MidName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Person.LastName" class="control-label"></label>
-                <input asp-for="Person.LastName" class="form-control" />
-                <span asp-validation-for="Person.LastName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Person.NickName" class="control-label"></label>
-                <input asp-for="Person.NickName" class="form-control" />
-                <span asp-validation-for="Person.NickName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Person.Description" class="control-label"></label>
-                <textarea asp-for="Person.Description" class="form-control"></textarea>
-                <span asp-validation-for="Person.Description" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Person.Telephone" class="control-label"></label>
-                <input asp-for="Person.Telephone" class="form-control" />
-                <span asp-validation-for="Person.Telephone" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Person.Kids" class="control-label"></label>
-                <input asp-for="Person.Kids" class="form-control" />
-                <span asp-validation-for="Person.Kids" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Person.Email" class="control-label"></label>
-                <input asp-for="Person.Email" class="form-control" />
-                <span asp-validation-for="Person.Email" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Person.Occupation" class="control-label"></label>
-                <input asp-for="Person.Occupation" class="form-control" />
-                <span asp-validation-for="Person.Occupation" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Person.StatusId" class="control-label"></label>
-                <select asp-for="Person.StatusId" class ="form-control" asp-items="ViewBag.StatusId"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="Person.BirthDay" class="control-label"></label>
-                <select asp-for="Person.BirthDay" class ="form-control" asp-items="ViewBag.BirthDay"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="Person.BirthMonth" class="control-label"></label>
-                <select asp-for="Person.BirthMonth" class ="form-control" asp-items="ViewBag.BirthMonth"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="Person.Image" class="control-label"></label>
-                <input type="file" asp-for="Image" class="form-control"/>
-            </div>
-            
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+
+<form method="post" enctype="multipart/form-data">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label asp-for="Person.FirstName"></label>
+            <input asp-for="Person.FirstName" type="text" class="form-control" id="firstName" placeholder="FirstName">
+            <span asp-validation-for="Person.FirstName" class="text-danger"></span>
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="Person.LastName"></label>
+            <input asp-for="Person.LastName" type="text" class="form-control" id="lastName" placeholder="Last Name">
+            <span asp-validation-for="Person.LastName" class="text-danger"></span>
+        </div>
     </div>
-</div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label asp-for="Person.MidName"></label>
+            <input asp-for="Person.MidName" type="text" class="form-control" id="middleName" placeholder="Middle Name">
+            <span asp-validation-for="Person.MidName" class="text-danger"></span>
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="Person.NickName"></label>
+            <input asp-for="Person.NickName" type="text" class="form-control" id="nickName" placeholder="NickName">
+            <span asp-validation-for="Person.NickName" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Person.Description"></label>
+        <textarea asp-for="Person.Description" class="form-control" rows="3" id="description" placeholder="A wild saying?"></textarea>
+        <span asp-validation-for="Person.Description" class="text-danger"></span>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-2">
+            <label asp-for="Person.Telephone"></label>
+            <input asp-for="Person.Telephone" class="form-control" placeholder="Phone Number" />
+            <span asp-validation-for="Person.Telephone" class="text-danger"></span>
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="Person.Email"></label>
+            <input asp-for="Person.Email" class="form-control" type="email" placeholder="Email" />
+            <span asp-validation-for="Person.Email" class="text-danger"></span>
+        </div>
+        <div class="form-group col-md-4">
+            <label asp-for="Person.Occupation"></label>
+            <input asp-for="Person.Occupation" class="form-control" placeholder="Occupation" />
+            <span asp-validation-for="Person.Occupation" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label asp-for="Person.Kids"></label>
+            <input asp-for="Person.Kids" class="form-control" />
+            <span asp-validation-for="Person.Kids" class="text-danger"></span>
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="Person.StatusId"></label>
+            <select asp-for="Person.StatusId" class="form-control" asp-items="ViewBag.StatusId"></select>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-2">
+            <label asp-for="Person.BirthDay"></label>
+            <select asp-for="Person.BirthDay" class="form-control" asp-items="ViewBag.BirthDay"></select>
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="Person.BirthMonth"></label>
+            <select asp-for="Person.BirthMonth" class="form-control" asp-items="ViewBag.BirthMonth"></select>
+        </div>
+
+        <div class="form-group col-md-4">
+            <label asp-for="Person.Image" class="control-label"></label>
+            <input type="file" asp-for="Image" class="form-control" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-primary" />
+    </div>  
+</form>
 
 <div>
     <a asp-page="Index">Back to List</a>
