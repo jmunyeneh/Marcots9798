@@ -45,7 +45,12 @@ namespace MarcotsContactApp
             services.AddTransient<IContactService, ContactService>();
             services.AddTransient<IEmailSender, EmailSender>();
             services.Configure<AuthMessageSenderOptions>(Configuration);
-            
+
+            services.AddMvc()
+                .AddRazorPagesOptions(options =>
+                {
+                    options.Conventions.AllowAnonymousToFolder("/Contacts");
+                });
 
             services.AddRazorPages();
             services.AddAuthentication()
