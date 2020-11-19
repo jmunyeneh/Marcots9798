@@ -6,44 +6,21 @@
     string monthName = System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(monthNumber);
 }
 
-@*<div class="text-center">
-    <br />
-    <div>
-
-        <br />
-        <div>
-            @if (Model.IsRecordAvailable)
-            {
-            <P>
-                Birthdays of the month of <em>@monthName</em>
-            </P>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th>@Html.DisplayNameFor(model => model.Person[0].FirstName)</th>
-                        <th>@Html.DisplayNameFor(model => model.Person[0].LastName)</th>
-                        <th>@Html.DisplayNameFor(model => model.Person[0].BirthDay)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var item in Model.Person)
-                    {
-                    <tr>
-                        <td><img class="img img-thumbnail" src="@Url.Content(item.GetInlineImageSrc())" alt="Not available" width="171" height="180" /></td>
-                        <td>@Html.DisplayFor(modelItem => item.FirstName)</td>
-                        <td>@Html.DisplayFor(modelItem => item.LastName)</td>
-                        <td>@monthName @Html.DisplayFor(modelItem => item.BirthDay)</td>
-                    </tr>
-                    }
-                </tbody>
-            </table>
-            }
-            else
-            {
-            <p>No birthdays for the month of @monthName</p>
-            }
-
+<div class="text-center">
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="/images/shutterstock.png" alt="First slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="/images/Togetherness.png" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="/images/shutterstock.png" alt="Third slide">
+            </div>
         </div>
     </div>
-</div>*@
+</div>
+
+
+
