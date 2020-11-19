@@ -12,8 +12,8 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/persons/index">
-                    Marcots Class of 97/98    
+                <a class="navbar-brand" asp-area="" asp-page="/index">
+                    <img src="/images/catOfMarcots.jpg" alt="Cathedral" />                      
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -23,29 +23,33 @@
                     <partial name="_LoginPartial" />
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">About Us</a>
                         </li>
-                        @if(User.Identity.IsAuthenticated)
+                        @if (User.Identity.IsAuthenticated)
                         {
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/persons/index">Members</a>
-                        </li>      
-                        }
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/persons/index">Members</a>
+                            </li>
+                        }                       
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
     <div class="container">
-        <main role="main" class="pb-3">             
-            @*<div class="row">
-                <img src="~/cat.jpg" alt="..." class="img-thumbnail">
-            </div>*@ 
-                @RenderBody()           
-        </main> 
-        <div class="text-center">
-           <partial name="_BirthDaysDisplay" />
-        </div>       
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            View Member(s) birthday of the month
+        </button>
+        </p>
+        <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+                <partial name="_BirthDaysDisplay" />
+            </div>
+        </div>      
     </div>
 
     <footer class="border-top footer text-muted">
