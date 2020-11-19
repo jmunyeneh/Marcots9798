@@ -681,3 +681,6 @@ C:\Users\JaydenExpress\Source\Repos\jmunyeneh\Marcots9798\MarcotsContactApp\obj\
 C:\Users\JaydenExpress\Source\Repos\jmunyeneh\Marcots9798\MarcotsContactApp\obj\Debug\netcoreapp3.1\MarcotsContactApp.pdb
 C:\Users\JaydenExpress\Source\Repos\jmunyeneh\Marcots9798\MarcotsContactApp\obj\Debug\netcoreapp3.1\MarcotsContactApp.genruntimeconfig.cache
 C:\Users\JaydenExpress\source\repos\jmunyeneh\Marcots9798\MarcotsContactApp\obj\Debug\netcoreapp3.1\Razor\Pages\Shared\_BirthDaysDisplay.cshtml.g.cs
+C:\Users\JaydenExpress\Source\Repos\jmunyeneh\Marcots9798\MarcotsContactApp\obj\Debug\netcoreapp3.1\MarcotsContactApp.csprojAssemblyReference.cache
+C:\Users\JaydenExpress\Source\Repos\jmunyeneh\Marcots9798\MarcotsContactApp\obj\Debug\netcoreapp3.1\Razor\Pages\Contacts\Index.cshtml.g.cs
+C:\Users\JaydenExpress\Source\Repos\jmunyeneh\Marcots9798\MarcotsContactApp\obj\Debug\netcoreapp3.1\Razor\Pages\Contacts\Contact.cshtml.g.cs
